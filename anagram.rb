@@ -6,6 +6,7 @@
 # * Non-alphanumeric characters should be considered as part of the anagram (e.g. "he's" is not an anagram of "she")
 # * The application should be able to respond to a request made every second
 # * Assume that the application will be hosted on heroku
+require 'singleton'
 
 class Anagram
   include Singleton
