@@ -14,4 +14,10 @@ describe AnagramServer do
     assert_equal "Welcome!", last_response.body
   end
   
+  it 'finds anagrams of a single word' do
+    get '/crepitus'
+    assert last_response.ok?
+    assert_equal '{"crepitus":["cuprites","pictures","piecrust"]}', last_response.body
+  end
+  
 end
