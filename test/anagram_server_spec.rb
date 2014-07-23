@@ -19,5 +19,15 @@ describe AnagramServer do
     assert last_response.ok?
     assert_equal '{"crepitus":["cuprites","pictures","piecrust"]}', last_response.body
   end
+
+  it 'finds anagrams of multiple words in a batch' do
+    get '/crepitus,paste,kinship'
+    assert last_response.ok?
+    assert_equal '{"crepitus":["cuprites","pictures","piecrust"],\
+    "paste":["pates","peats","septa","spate","tapes","tepas"],\
+    "kinship":["pinkish"]',\
+     last_response.body
+  end
+
   
 end
