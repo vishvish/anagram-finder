@@ -1,7 +1,5 @@
 require_relative './test_helper'
 require_relative '../anagram'
-require 'benchmark'
-require 'pry'
 
 describe Anagram do
   let(:anagram) { Anagram.instance }

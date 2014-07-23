@@ -6,3 +6,4 @@ gem 'sinatra'
 gem 'pry'
 gem 'minitest-reporters'
 gem 'simplecov', :require => false, :group => :test
+gem 'rack-test'
