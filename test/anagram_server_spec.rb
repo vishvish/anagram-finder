@@ -3,17 +3,17 @@ require_relative '../anagram_server'
 
 describe AnagramServer do
   include Rack::Test::Methods
-  
+
   def app
     AnagramServer
   end
-  
+
   it 'welcomes you' do
     get '/'
     assert last_response.ok?
     assert_equal "Welcome!", last_response.body
   end
-  
+
   it 'finds anagrams of a single word' do
     get '/crepitus'
     assert last_response.ok?
@@ -23,11 +23,9 @@ describe AnagramServer do
   it 'finds anagrams of multiple words in a batch' do
     get '/crepitus,paste,kinship'
     assert last_response.ok?
-    assert_equal '{"crepitus":["cuprites","pictures","piecrust"],\
-    "paste":["pates","peats","septa","spate","tapes","tepas"],\
-    "kinship":["pinkish"]',\
+    assert_equal '{"crepitus":["cuprites","pictures","piecrust"],"paste":["pates","peats","septa","spate","tapes","tepas"],"kinship":["pinkish"]}',
      last_response.body
   end
 
-  
+
 end
