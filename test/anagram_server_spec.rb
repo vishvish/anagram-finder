@@ -27,5 +27,11 @@ describe AnagramServer do
      last_response.body
   end
 
+  it 'returns an empty array if no anagrams are available' do
+    get '/sdfwehrtgegfg'
+    assert last_response.ok?
+    assert_equal '{"sdfwehrtgegfg":[]}', last_response.body
+  end
+
 
 end
