@@ -1,5 +1,9 @@
 # Anagram Server
 
+---
+
+![image](https://travis-ci.org/vishvish/moj.svg?branch=develop)
+
 This is a basic server providing anagrams of words.
 
 ## Install
