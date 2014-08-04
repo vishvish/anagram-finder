@@ -1,4 +1,4 @@
-# Anagram Server
+# Anagram Finder
 
 ---
 
