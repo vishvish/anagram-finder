@@ -2,7 +2,7 @@
 
 ---
 
-![image](https://travis-ci.org/vishvish/moj.svg?branch=develop)
+![image](https://travis-ci.org/vishvish/anagram-finder.svg?branch=develop)
 
 This is a basic server providing anagrams of words.
 
